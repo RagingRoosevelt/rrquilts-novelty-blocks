@@ -1,59 +1,35 @@
 {
  "format": "rrqlib-index",
  "version": 1,
- "id": "your-name-fabrics",
- "name": "Your Library Name",
- "description": "What this library holds.",
+ "id": "rrquilts-novelty-blocks",
+ "name": "Novelty Blocks",
+ "description": "Quilt blocks for fun: fractals and other novelties, for RRQuilts. Each folder is a pack you can switch on or off.",
  "author": {
-  "name": "Your Name",
-  "url": "https://example.org"
+  "name": "RagingRoosevelt",
+  "url": "https://github.com/RagingRoosevelt"
  },
  "license": "CC-BY-SA-4.0",
- "revision": 3,
+ "revision": 1,
  "changelog": [
   {
    "revision": 1,
-   "date": "2026-10-14",
-   "notes": "Example palette"
-  },
-  {
-   "revision": 3,
-   "date": "2026-10-15",
-   "notes": "Library format 3"
+   "date": "2026-10-20",
+   "notes": "Fractals pack"
   }
  ],
  "packs": [
   {
-   "id": "your-name-fabrics-example-palette",
-   "name": "Example Palette",
-   "kind": "palettes",
-   "path": "packs/your-name-fabrics-example-palette/rrqlib.json",
-   "items": 2,
-   "revision": 3,
+   "id": "rrquilts-novelty-blocks-fractals",
+   "name": "Fractals",
+   "kind": "blocks",
+   "path": "packs/rrquilts-novelty-blocks-fractals/rrqlib.json",
+   "items": 7,
+   "revision": 1,
    "sizes": {
-    "256": 17858,
-    "512": 32356
+    "256": 0,
+    "512": 0
    },
-   "fabrics": [
-    {
-     "id": "your-name-fabrics.blue-dots",
-     "name": "blue dots",
-     "average": [
-      93,
-      127,
-      178
-     ]
-    },
-    {
-     "id": "your-name-fabrics.red-dots",
-     "name": "red dots",
-     "average": [
-      197,
-      84,
-      77
-     ]
-    }
-   ]
+   "fabrics": []
   }
  ]
 }

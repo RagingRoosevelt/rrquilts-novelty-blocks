@@ -1,0 +1,5 @@
+{
+  "name": "Fractals",
+  "designer": "RagingRoosevelt",
+  "description": "Fractal blocks: Sierpinski carpet, triangle and diamond, Vicsek cross, Cantor bars, Hilbert curve and Koch snowflake. Each is drawn with the largest pieces that keep the pattern, so it can be sewn."
+}
