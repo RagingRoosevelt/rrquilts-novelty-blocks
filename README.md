@@ -6,6 +6,7 @@ Quilt blocks for fun, for [RRQuilts](https://ragingroosevelt.github.io/RRQuilts/
 | Pack | Blocks |
 | --- | --- |
 | Fractals | Sierpinski Carpet, Vicsek Cross, Cantor Bars, Hilbert Curve, Sierpinski Triangle, Sierpinski Diamond, Koch Snowflake |
+| Memes | Cooler S |
 
 By RagingRoosevelt, shared under [CC BY-SA 4.0](LICENSE).
 

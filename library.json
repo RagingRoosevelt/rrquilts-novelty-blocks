@@ -12,12 +12,17 @@
  "links": {
   "homepage": "https://github.com/RagingRoosevelt/rrquilts-novelty-blocks"
  },
- "revision": 1,
+ "revision": 2,
  "changelog": [
   {
    "revision": 1,
    "date": "2026-10-20",
    "notes": "Fractals pack"
+  },
+  {
+   "revision": 2,
+   "date": "2026-10-20",
+   "notes": "Memes pack: Cooler S"
   }
  ],
  "packs": [
@@ -27,6 +32,19 @@
    "kind": "blocks",
    "path": "packs/rrquilts-novelty-blocks-fractals/rrqlib.json",
    "items": 7,
+   "revision": 1,
+   "sizes": {
+    "256": 0,
+    "512": 0
+   },
+   "fabrics": []
+  },
+  {
+   "id": "rrquilts-novelty-blocks-memes",
+   "name": "Memes",
+   "kind": "blocks",
+   "path": "packs/rrquilts-novelty-blocks-memes/rrqlib.json",
+   "items": 1,
    "revision": 1,
    "sizes": {
     "256": 0,
