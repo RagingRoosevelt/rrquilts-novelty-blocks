@@ -1,4 +1,4 @@
-# Novelty Blocks
+# RagingRoosevelt's Novelty
 
 Quilt blocks for fun, for [RRQuilts](https://ragingroosevelt.github.io/RRQuilts/). Each folder in
 `sources/` is a pack you can switch on or off in the app.

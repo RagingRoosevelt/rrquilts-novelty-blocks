@@ -11,6 +11,9 @@
   "name": "RagingRoosevelt"
  },
  "license": "CC-BY-SA-4.0",
+ "links": {
+  "homepage": "https://github.com/RagingRoosevelt/rrquilts-novelty-blocks"
+ },
  "categories": [
   {
    "id": "rrquilts-novelty-blocks.cat.fractals",
@@ -19,7 +22,7 @@
  ],
  "library": {
   "id": "rrquilts-novelty-blocks",
-  "name": "Novelty Blocks"
+  "name": "RagingRoosevelt's Novelty"
  },
  "items": [
   {
@@ -27818,8 +27821,5 @@
     }
    ]
   }
- ],
- "links": {
-  "homepage": "https://github.com/RagingRoosevelt/rrquilts-novelty-blocks"
- }
+ ]
 }
