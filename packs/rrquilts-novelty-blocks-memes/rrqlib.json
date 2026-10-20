@@ -4,11 +4,30 @@
  "units": "in",
  "kind": "pack",
  "id": "rrquilts-novelty-blocks-memes",
- "revision": 1,
+ "revision": 2,
  "name": "Memes",
  "description": "Blocks of internet and schoolyard memes: the Cooler S (the Cool S doodle, laid corner to corner).",
  "author": {
-  "name": "RagingRoosevelt"
+  "name": "RagingRoosevelt",
+  "url": "https://github.com/RagingRoosevelt",
+  "socials": [
+   {
+    "type": "Printables",
+    "handle": "RagingRoosevelt"
+   },
+   {
+    "type": "GitHub",
+    "handle": "RagingRoosevelt"
+   },
+   {
+    "type": "Threadloop",
+    "handle": "ragingroosevelt"
+   },
+   {
+    "type": "Ravelry",
+    "handle": "RagingRoosevelt"
+   }
+  ]
  },
  "license": "CC-BY-SA-4.0",
  "links": {

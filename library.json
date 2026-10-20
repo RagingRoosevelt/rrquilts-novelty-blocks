@@ -6,13 +6,31 @@
  "description": "Quilt blocks for fun: fractals and other novelties, for RRQuilts. Each folder is a pack you can switch on or off.",
  "author": {
   "name": "RagingRoosevelt",
-  "url": "https://github.com/RagingRoosevelt"
+  "url": "https://github.com/RagingRoosevelt",
+  "socials": [
+   {
+    "type": "Printables",
+    "handle": "RagingRoosevelt"
+   },
+   {
+    "type": "GitHub",
+    "handle": "RagingRoosevelt"
+   },
+   {
+    "type": "Threadloop",
+    "handle": "ragingroosevelt"
+   },
+   {
+    "type": "Ravelry",
+    "handle": "RagingRoosevelt"
+   }
+  ]
  },
  "license": "CC-BY-SA-4.0",
  "links": {
   "homepage": "https://github.com/RagingRoosevelt/rrquilts-novelty-blocks"
  },
- "revision": 2,
+ "revision": 3,
  "changelog": [
   {
    "revision": 1,
@@ -23,6 +41,11 @@
    "revision": 2,
    "date": "2026-10-20",
    "notes": "Memes pack: Cooler S"
+  },
+  {
+   "revision": 3,
+   "date": "2026-10-20",
+   "notes": "Author socials: Printables, GitHub, Threadloop, Ravelry."
   }
  ],
  "packs": [
@@ -32,7 +55,7 @@
    "kind": "blocks",
    "path": "packs/rrquilts-novelty-blocks-fractals/rrqlib.json",
    "items": 7,
-   "revision": 1,
+   "revision": 2,
    "sizes": {
     "256": 0,
     "512": 0
@@ -45,7 +68,7 @@
    "kind": "blocks",
    "path": "packs/rrquilts-novelty-blocks-memes/rrqlib.json",
    "items": 1,
-   "revision": 1,
+   "revision": 2,
    "sizes": {
     "256": 0,
     "512": 0

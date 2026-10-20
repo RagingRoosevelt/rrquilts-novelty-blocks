@@ -4,7 +4,25 @@
   "description": "Quilt blocks for fun: fractals and other novelties, for RRQuilts. Each folder is a pack you can switch on or off.",
   "author": {
     "name": "RagingRoosevelt",
-    "url": "https://github.com/RagingRoosevelt"
+    "url": "https://github.com/RagingRoosevelt",
+    "socials": [
+      {
+        "type": "Printables",
+        "handle": "RagingRoosevelt"
+      },
+      {
+        "type": "GitHub",
+        "handle": "RagingRoosevelt"
+      },
+      {
+        "type": "Threadloop",
+        "handle": "ragingroosevelt"
+      },
+      {
+        "type": "Ravelry",
+        "handle": "RagingRoosevelt"
+      }
+    ]
   },
   "license": "CC-BY-SA-4.0",
   "links": {
