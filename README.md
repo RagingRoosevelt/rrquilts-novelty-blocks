@@ -12,7 +12,7 @@ By RagingRoosevelt, shared under [CC BY-SA 4.0](LICENSE).
 
 ## Using it
 
-In RRQuilts, open Libraries and add this repository's address, or [click here](theodorelindsey.io/RRQuilts/libraries?add=https://github.com/RagingRoosevelt/rrquilts-novelty-blocks), or import a `.rrqlib` file from the
+In RRQuilts, open Libraries and add this repository's address, or [click here](https://theodorelindsey.io/RRQuilts/libraries?add=https://github.com/RagingRoosevelt/rrquilts-novelty-blocks), or import a `.rrqlib` file from the
 releases.
 
 ## Changing it
