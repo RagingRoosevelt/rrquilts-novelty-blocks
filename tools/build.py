@@ -9,7 +9,7 @@
 A folder may hold `pack.json` (name, designer, description, tags, size_inches, crop, and `fabrics`:
 per-file overrides `{"<file>": {"name", "sku", "size": [w, h]}}`), a `palette.rrqplt` whose
 colors become the pack's (a solids pack needs no images), and a `blocks.rrqlib` (a pack made in
-RRQuilts, Libraries › Make a pack) whose blocks and their categories join the pack. Images (JPEG, PNG, WebP)
+RRQuilts, Libraries › Make a pack) whose blocks, EPP shapes and rosettes and their categories join the pack. Images (JPEG, PNG, WebP)
 are cropped to a centred square (unless crop is false) and saved as WebP at 256 and 512 px (and 1024 px
 with --print: about three times the size, used only when printing), never enlarged. Writes `packs/<pack>/rrqlib.json`, the images beside it, and `library.json`.
 """
@@ -17,7 +17,7 @@ import argparse, datetime, io, json, shutil, sys
 from PIL import Image, ImageStat
 
 Image.MAX_IMAGE_PIXELS = 300_000_000  # manufacturers' photos can be print resolution
-from common import FORMATS, ROOT, SIZES, name_from_file, read_json, sha256, slug, write_json
+from common import FORMATS, ITEM_TYPES, ROOT, SIZES, name_from_file, read_json, sha256, slug, write_json
 
 
 def webp(im, px):
@@ -41,7 +41,7 @@ def contents(doc):
     if not doc:
         return None
     pal = [it['data'] for it in doc['items'] if it['type'] == 'colors']
-    blocks = sorted((it['data']['id'], it['data'].get('version', '')) for it in doc['items'] if it['type'] == 'block')
+    blocks = sorted((it['type'], it['data']['id'], it['data'].get('version', '')) for it in doc['items'] if it['type'] in ITEM_TYPES)
     fills = contents_of([f for d in pal for f in d.get('fabrics', [])], [c for d in pal for c in d.get('colors', [])])
     return fills, blocks, json.dumps(doc.get('author'), sort_keys=True)  # who it credits counts too
 
@@ -146,8 +146,8 @@ def build_pack(cfg, folder, listed):
         })
         preview.append({'id': fid, 'name': fname, 'average': avg})
     colors = plt['collection']['colors'] if plt else []
-    # ponytail: blocks only; fabric images inside blocks aren't copied out yet (paint blocks with colors)
-    block_items = [it for it in made.get('items', []) if it.get('type') == 'block']
+    # ponytail: fabric images inside blocks and rosettes aren't copied out yet (paint them with colors)
+    block_items = [it for it in made.get('items', []) if it.get('type') in ITEM_TYPES]
     used = {it.get('category') for it in block_items}
     categories = [c for c in made.get('categories', []) if c.get('id') in used]
     if not fabrics and not colors and not block_items:

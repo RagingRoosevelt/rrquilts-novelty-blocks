@@ -32,7 +32,8 @@ def esc(s):
 
 def block_svg(item):
     """A block drawn as SVG from its patches (paths in 0…1, scaled to its size so arcs are circular),
-    in its first coloring. Fabric fills show the fabric's average color."""
+    in its first coloring. Fabric fills show the fabric's average color. A month data block (library
+    format 6) shows its own 31-day drawing."""
     d = item['data']
     w, h = d['size']
     rgb = {c['id']: 'rgb({},{},{})'.format(*c['rgb']) for c in item.get('colors', [])}
@@ -56,6 +57,7 @@ def block_svg(item):
             elif c[0] == 'Z':
                 cmds.append('Z')
         f = fills.get(p['id'], {})
+        f = f.get('under', {}) if 'data' in f else f  # a data block's day place: the color under it
         color = rgb.get(f.get('color') or f.get('fabric'), '#ccc')
         out.append(f'<path d="{" ".join(cmds)}" fill="{color}"/>')
     return (f'<svg class="blk" viewBox="0 0 {w:g} {h:g}" role="img" aria-label="{esc(d["notecard"]["name"])}">'
@@ -124,6 +126,9 @@ def main():
         n_palettes += sum(1 for i in doc['items'] if i['type'] == 'colors')
         for item in doc['items']:
             data = item['data']
+            # shortcut: the gallery doesn't draw EPP shapes and rosettes yet (they're in the pack all the same).
+            if item['type'] in ('epp-shape', 'rosette'):
+                continue
             if item['type'] == 'block':
                 name, size = data['notecard']['name'], ' × '.join(f'{round(n, 2):g}' for n in data['size']) + ' in'
                 tiles.append(f'<figure data-type="blocks"><a class="zoom" href="#" data-name="{esc(name)}"'
@@ -155,7 +160,7 @@ def main():
         total += len(tiles)
         who = ' · '.join(x for x in [doc.get('author', {}).get('name'), p.get('date') if p.get('date') != '??-??' else ''] if x)
         sections.append(
-            f'<section id="{esc(p["id"])}" data-types="{" ".join(sorted({"blocks" if i["type"] == "block" else "palettes" for i in doc["items"]}))}"><div class="head"><h2>{esc(p["name"])} <span>{len(tiles)}</span></h2>'
+            f'<section id="{esc(p["id"])}" data-types="{" ".join(sorted({"blocks" if i["type"] == "block" else "palettes" for i in doc["items"] if i["type"] in ("block", "colors")}))}"><div class="head"><h2>{esc(p["name"])} <span>{len(tiles)}</span></h2>'
             f'<button type="button" class="link icon" data-act="copy" aria-label="Copy link" title="Copy link">{LINK_ICON}</button>'
             f'<button type="button" class="link icon share" data-act="share" aria-label="Share" title="Share" hidden>{SHARE_ICON}</button></div>'
             f'<p class="by">{esc(who)}</p><div class="grid">{"".join(tiles)}</div></section>')
