@@ -7,9 +7,9 @@ SIZES = (256, 512)  # build.py --print adds 1024
 FORMATS_URL = 'https://ragingroosevelt.github.io/RRQuilts/schemas/formats.json'
 TEMPLATE_RAW = 'https://raw.githubusercontent.com/RRQuilts/rrquilts-library-template/main/'
 # Format versions these tools write. `tools/upgrade.py` moves a library to newer ones.
-FORMATS = {'rrqlib': 8, 'rrqlib-index': 1, 'rrqplt': 1}
+FORMATS = {'rrqlib': 9, 'rrqlib-index': 1, 'rrqplt': 1}
 # Items a pack made in RRQuilts can hold besides palettes: blocks, and (rrqlib 8) EPP shapes and
-# rosettes.
+# rosettes (rrqlib 9: rosette colorings may follow another, carried as they are).
 ITEM_TYPES = ('block', 'epp-shape', 'rosette')
 
 
